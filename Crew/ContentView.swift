@@ -1,19 +1,23 @@
-//
-//  ContentView.swift
-//  Crew
-//
-//  Created by Gal Tessone on 14/10/2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Test Supabase Connection") {
+                Task {
+                    do {
+                        let res = try await SupabaseManager.shared.client
+                            .database
+                            .from("crews")
+                            .select()
+                            .execute()
+
+                        print(String(data: res.data, encoding: .utf8) ?? "No data")
+                    } catch {
+                        print("Error:", error)
+                    }
+                }
+            }
         }
         .padding()
     }

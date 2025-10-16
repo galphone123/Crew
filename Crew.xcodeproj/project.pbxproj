@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BECE4CCB2E9DC2B300E1C15C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CCA2E9DC2B300E1C15C /* Auth */; };
+		BECE4CCD2E9DC2B300E1C15C /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CCC2E9DC2B300E1C15C /* Functions */; };
+		BECE4CCF2E9DC2B300E1C15C /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CCE2E9DC2B300E1C15C /* PostgREST */; };
+		BECE4CD12E9DC2B300E1C15C /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CD02E9DC2B300E1C15C /* Realtime */; };
+		BECE4CD32E9DC2B300E1C15C /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CD22E9DC2B300E1C15C /* Storage */; };
+		BECE4CD52E9DC2B300E1C15C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = BECE4CD42E9DC2B300E1C15C /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BECE4CAD2E9DB5DE00E1C15C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +38,33 @@
 		BECE4CB62E9DB5DE00E1C15C /* CrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BE4EC5692EA10982003EB22E /* Exceptions for "Crew" folder in "Crew" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Secrets.sample.plist,
+			);
+			target = BECE4C9E2E9DB5DD00E1C15C /* Crew */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		BE4EC56A2EA10982003EB22E /* Exceptions for "Crew" folder in "Compile Sources" phase from "Crew" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = BECE4C9B2E9DB5DD00E1C15C /* Sources */;
+			membershipExceptions = (
+				Resources/Secrets.sample.plist,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BECE4CA12E9DB5DD00E1C15C /* Crew */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BE4EC5692EA10982003EB22E /* Exceptions for "Crew" folder in "Crew" target */,
+				BE4EC56A2EA10982003EB22E /* Exceptions for "Crew" folder in "Compile Sources" phase from "Crew" target */,
+			);
 			path = Crew;
 			sourceTree = "<group>";
 		};
@@ -52,6 +85,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECE4CCF2E9DC2B300E1C15C /* PostgREST in Frameworks */,
+				BECE4CCD2E9DC2B300E1C15C /* Functions in Frameworks */,
+				BECE4CD52E9DC2B300E1C15C /* Supabase in Frameworks */,
+				BECE4CCB2E9DC2B300E1C15C /* Auth in Frameworks */,
+				BECE4CD32E9DC2B300E1C15C /* Storage in Frameworks */,
+				BECE4CD12E9DC2B300E1C15C /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +151,12 @@
 			);
 			name = Crew;
 			packageProductDependencies = (
+				BECE4CCA2E9DC2B300E1C15C /* Auth */,
+				BECE4CCC2E9DC2B300E1C15C /* Functions */,
+				BECE4CCE2E9DC2B300E1C15C /* PostgREST */,
+				BECE4CD02E9DC2B300E1C15C /* Realtime */,
+				BECE4CD22E9DC2B300E1C15C /* Storage */,
+				BECE4CD42E9DC2B300E1C15C /* Supabase */,
 			);
 			productName = Crew;
 			productReference = BECE4C9F2E9DB5DD00E1C15C /* Crew.app */;
@@ -195,6 +240,9 @@
 			);
 			mainGroup = BECE4C962E9DB5DD00E1C15C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BECE4CA02E9DB5DD00E1C15C /* Products */;
 			projectDirPath = "";
@@ -558,6 +606,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BECE4CCA2E9DC2B300E1C15C /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		BECE4CCC2E9DC2B300E1C15C /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		BECE4CCE2E9DC2B300E1C15C /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		BECE4CD02E9DC2B300E1C15C /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		BECE4CD22E9DC2B300E1C15C /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		BECE4CD42E9DC2B300E1C15C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECE4CC92E9DC2B300E1C15C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BECE4C972E9DB5DD00E1C15C /* Project object */;
 }
