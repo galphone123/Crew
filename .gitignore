@@ -1,0 +1,13 @@
+# Xcode build files
+DerivedData/
+xcuserdata/
+
+# Swift Package Manager
+.build/
+
+# Secrets
+Crew/Resources/Secrets.plist
+
+# macOS
+.DS_Store
+
